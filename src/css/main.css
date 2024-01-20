@@ -1,0 +1,147 @@
+.super-div {
+    background: linear-gradient(180deg, rgb(179, 55, 105) 0%, rgba(24, 61, 37, 0.89) 45%, #000000 100%);
+    /* background: linear-gradient(180deg, rgb(55, 120, 179) 0%, rgb(28 24 61 / 89%) 45%, #000000 100%); */
+    height: 100vh;
+    font-weight: 400;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.icons {
+    filter: invert(100%);
+}
+
+.heart:hover {
+    transition: all 0.1s ease;
+    transform: scale(1.1);
+}
+
+.press:active{
+    transition: all 0.2s ease;
+    transform: scale(0.9);
+}
+
+.genre {
+    position: relative;
+    top: 2rem;
+    font-size: 1.5rem;
+    line-height: 2.3em;
+    font-weight: 300;
+    right: 2em;
+}
+
+.limiter {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artist {
+    font-size: 0.8rem;
+    line-height: 0em;
+}
+
+.imagePlace {
+    height: 3.5rem;
+    width: 15em;
+    /* min-width: 15em; */
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    mix-blend-mode: soft-light;
+    opacity: 0;
+    animation: fInAnimation 2s ease forwards;
+    /* z-index: -1; */
+}
+
+@keyframes fInAnimation {
+    to {
+        opacity: 1;
+    }
+}
+
+.mainImage{
+    height: 19rem;
+    width: 19rem;
+    /* left: 0; */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    /* position: absolute; */
+    display: flex;
+    /* mix-blend-mode: overlay; */
+    /* filter: brightness(60%); */
+    z-index: 10;
+}
+
+.fader {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 20em;
+    height: 0.2em;
+    border-radius: 5px;
+    /* background: linear-gradient(to right, black 0%, black 50%, rgba(178, 135, 212, 1) 50%, rgba(178, 135, 212, 1) 100%); */
+    /* background: #B287D4; */
+    background: linear-gradient(to right, #ffffff 5%, #B287D4 5%);
+    outline: none;
+    /* opacity: ; */
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-top: 1rem;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 50%;
+    position: relative;
+    /* right: 8.8em; */
+    background: rgb(255, 255, 255);
+}
+
+.skeleton{
+    opacity: 0.7;
+    animation: skelload 1s linear infinite alternate;
+    border-radius: 0.125rem;
+
+}
+
+.skeleton-text{
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 0.225rem;
+}
+
+@keyframes skelload {
+    0%{
+        background-color: hsl(200, 20%, 50%);
+    }
+    100%{
+        background-color: hsl(200, 20%, 95%);
+    }
+    
+}
